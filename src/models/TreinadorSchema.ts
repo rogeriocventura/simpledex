@@ -17,6 +17,12 @@ const treinadorSchema = new Schema(
         {
             type: String,
             required: [true, "É necessário definir a SENHA do treinador!!"]
+        },
+        pokeId:
+        {
+            type: String,
+            unique: true,
+            required: [true, "Insira um novo ID único!"]
         }
     },
     {
