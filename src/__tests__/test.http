@@ -1,0 +1,14 @@
+###
+POST http://localhost:1234/simpledex/treinador/cadastrar
+Content-Type: application/json
+
+{
+    "nome"          :   "teste",
+    "email"         :   "teste@teste",
+    "senha"         :   "teste123",
+    "pokeId"        :   "meuTeste"
+}
+
+
+###
+GET http://localhost:1234/simpledex/treinador/listar

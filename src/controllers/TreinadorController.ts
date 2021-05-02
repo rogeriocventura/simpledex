@@ -32,6 +32,7 @@ class TreinadorController{
             {
                 response.status(400).json({
                 objeto: error,
+                errorCode: error.code,
                 msg: "Falha na validação",
                 erro: true
                 });

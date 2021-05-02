@@ -1,5 +1,4 @@
-import { Schema } from "mongoose";
-
+import {model, Schema} from "mongoose";
 
 const treinadorSchema = new Schema(
     {
@@ -30,4 +29,4 @@ const treinadorSchema = new Schema(
     }
 );
 
-export {treinadorSchema};
+export default model("treinador",treinadorSchema);

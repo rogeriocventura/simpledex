@@ -1,7 +1,8 @@
 import { Router, Request, Response } from "express";
-//import { CicloController } from "../controllers/CicloController";
+import { PokemonController } from "../controllers/PokemonController";
+import { TreinadorController } from "../controllers/TreinadorController";
 const router = Router();
-//const cicloController = new CicloController();
+const treinadorController = new TreinadorController();
 
 
 router.get("/", (request: Request, response: Response) => {
@@ -9,11 +10,30 @@ router.get("/", (request: Request, response: Response) => {
 });
 
 
+//TREINADOR
+//cadastrar novo treinador
+router.post("/simpledex/treinador/cadastrar", treinadorController.cadastrarTreinador);
 
-//router.get("/ciclo/listar/", cicloController.listar);
-//router.get("/ciclo/listar/:param1", cicloController.buscarPorId);
-//router.post("/ciclo/cadastrar/", cicloController.cadastrar);
+//buscar treinador por pokeid
+//router.get("/simpledex/treinador/buscar/:id", treinadorController.buscarPorId);
+
+//listar todos treinadores
+router.get("/simpledex/treinador/listar", treinadorController.listarTreinador);
+
+//alterar dados do treinador
+//router.post("/simpledex/treinador/alterar", treinadorController.alterar);
+
+//excluir treinador usando pokeid
+//router.get("/simpledex/treinador/remover/:id", treinadorController.remover);  
+
+
+
   
+
+
+//POKEMON
+
+
 
 
 export { router };

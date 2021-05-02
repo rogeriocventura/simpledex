@@ -22,6 +22,7 @@ class TreinadorPokemonController{
             response.status(400).json({
               objeto: error,
               msg: "Falha na validação",
+              msg2: "Falha na validação2",
               erro: true
             });
           }
