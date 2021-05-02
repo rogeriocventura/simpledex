@@ -1,4 +1,5 @@
-import { Schema } from "mongoose";
+import {model, Schema} from "mongoose";
+import { mongoose } from "../config/database";
 
 
 const pokemonSchema = new Schema(
@@ -6,7 +7,8 @@ const pokemonSchema = new Schema(
         nome: 
         {
             type: String,
-            required: [true, "O campo NOME do treinador é obrigatório!!"]
+            required: [true, "O campo NOME do treinador é obrigatório!!"],
+            unique:true
         },
         descricao: 
         {
@@ -24,4 +26,4 @@ const pokemonSchema = new Schema(
     }
 );
 
-export {pokemonSchema};
+export default model("pokemon",pokemonSchema);

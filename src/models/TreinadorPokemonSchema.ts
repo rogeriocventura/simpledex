@@ -1,20 +1,12 @@
 import {model, Schema} from "mongoose";
 import { mongoose } from "../config/database";
-import {pokemonSchema} from "./PokemonSchema";
-import {treinadorSchema} from "./TreinadorSchema";
+import pokemonSchema from "./PokemonSchema";
+import treinadorSchema from "./TreinadorSchema";
 
 const treinadorPokemonSchema = new Schema(
     {
         treinador:[treinadorSchema],
-        pokemon:[pokemonSchema],
-        _id:
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            index:true,
-            required:true,
-            auto:true,
-            unique:true
-        }
+        pokemon:[pokemonSchema]        
     },
     {
         timestamps:true,
