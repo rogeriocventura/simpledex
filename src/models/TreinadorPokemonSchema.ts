@@ -5,8 +5,17 @@ import treinadorSchema from "./TreinadorSchema";
 
 const treinadorPokemonSchema = new Schema(
     {
-        treinador:[treinadorSchema],
-        pokemon:[pokemonSchema]        
+        treinador:
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'treinador'
+        },
+        pokemon:
+        {
+            type:mongoose.Schema.Types.ObjectId,
+            ref:'pokemon'
+        },
+        
     },
     {
         timestamps:true,

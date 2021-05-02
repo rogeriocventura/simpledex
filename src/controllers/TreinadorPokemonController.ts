@@ -5,17 +5,17 @@ import TreinadorPokemonSchema from "../models/TreinadorPokemonSchema";
 class TreinadorPokemonController{
     async listarTreinadorPokemon(request: Request, response: Response)
     {
-        const dadosTreinadorPokemono = await TreinadorPokemonSchema.find();
+        const dadosTreinadorPokemono = await TreinadorPokemonSchema.find().populate('treinador').populate('pokemon');
         response.status(200).json(dadosTreinadorPokemono);
     }
 
     async cadastrarTreinadorPokemon(request: Request, response: Response)
     {
         try {
-            const novoTreinadorPokemono = await TreinadorPokemonSchema.create(request.body);
+            const novoTreinadorPokemon = await TreinadorPokemonSchema.create(request.body);
             response.status(201).json({
-              objeto: novoTreinadorPokemono,
-              msg: "Novo pokemon cadastrado!",
+              objeto: novoTreinadorPokemon,
+              msg: "Novo pokemon cadastrado para o treinador!",
               erro: false
             });
           } catch (error) {
