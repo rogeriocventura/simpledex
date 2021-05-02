@@ -18,16 +18,16 @@ router.get("/", (request: Request, response: Response) => {
 router.post("/simpledex/treinador/cadastrar", treinadorController.cadastrarTreinador);
 
 //buscar treinador por pokeid
-//router.get("/simpledex/treinador/buscar/:id", treinadorController.buscarPorId);
+router.get("/simpledex/treinador/buscar/:id", treinadorController.buscarTreinador);
 
 //listar todos treinadores
 router.get("/simpledex/treinador/listar", treinadorController.listarTreinador);
 
 //alterar dados do treinador
-//router.post("/simpledex/treinador/alterar", treinadorController.alterar);
+router.post("/simpledex/treinador/alterar", treinadorController.atualizarTreinador);
 
 //excluir treinador usando pokeid
-//router.get("/simpledex/treinador/remover/:id", treinadorController.remover);  
+router.get("/simpledex/treinador/remover/:id", treinadorController.removerTreinador);  
 
 
 
@@ -36,16 +36,16 @@ router.get("/simpledex/treinador/listar", treinadorController.listarTreinador);
 router.post("/simpledex/pokemon/cadastrar", pokemonController.cadastrarPokemon);
 
 //buscar pokemon por nome
-//router.get("/simpledex/pokemon/buscar/:id", pokemonController.buscarPorId);
+router.get("/simpledex/pokemon/buscar/:nome", pokemonController.buscarPokemon);
 
 //listar todos pokemon
 router.get("/simpledex/pokemon/listar", pokemonController.listarPokemon);
 
 //alterar dados do pokemon
-//router.post("/simpledex/pokemon/alterar", pokemonController.alterar);
+router.post("/simpledex/pokemon/alterar", pokemonController.atualizarPokemon);
 
 //excluir pokemon por nome
-//router.get("/simpledex/pokemon/remover/:id", pokemonController.remover);  
+router.get("/simpledex/pokemon/remover/:nome", pokemonController.removerPokemon);  
 
 
 

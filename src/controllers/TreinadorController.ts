@@ -1,4 +1,5 @@
 import {Request, Response} from "express";
+import PokemonSchema from "../models/PokemonSchema";
 import TreinadorSchema from "../models/TreinadorSchema";
 
 
@@ -38,6 +39,24 @@ class TreinadorController{
                 });
             }
           }
+    }
+    async buscarTreinador(request: Request, response: Response)
+    {
+        const { id } = request.params;
+        const treinador = await TreinadorSchema.find({pokeId:id});
+        response.status(200).json(treinador);
+    }
+    async removerTreinador (request: Request, response: Response)
+    {
+        const { id } = request.params;
+        const treinador = await TreinadorSchema.deleteOne({pokeId:id});
+        response.status(200).json(treinador);
+    }
+    async atualizarTreinador (request: Request, response: Response)
+    {
+        const { id } = request.params;
+        const treinador = await TreinadorSchema.updateOne({pokeId:id});
+        response.status(200).json(treinador);
     }
 }
 

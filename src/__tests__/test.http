@@ -46,3 +46,22 @@ Content-Type: application/json
 
 ###
 GET http://localhost:3000/simpledex/treinadorPokemon/listar
+
+###
+POST http://localhost:3000/simpledex/treinador/buscar/meuTeste
+######
+GET http://localhost:3000/simpledex/treinador/remover/meuTeste
+
+#####
+POST http://localhost:3000/simpledex/treinador/alterar/meuTeste
+
+
+
+#############################################################
+POST http://localhost:3000/simpledex/pokemon/buscar/meuTeste
+
+######
+GET http://localhost:3000/simpledex/pokemon/remover/meuTeste
+
+#####
+POST http://localhost:3000/simpledex/pokemon/alterar/meuTeste

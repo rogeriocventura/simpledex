@@ -38,6 +38,25 @@ class PokemonController{
             }
           }
     }
+    async buscarPokemon (request: Request, response: Response)
+    {
+        const { name } = request.params;
+        const pokemon = await PokemonSchema.find({name:name});
+        response.status(200).json(pokemon);
+    }
+
+    async removerPokemon (request: Request, response: Response)
+    {
+        const { name } = request.params;
+        const pokemon = await PokemonSchema.deleteOne({name:name});
+        response.status(200).json(pokemon);
+    }
+    async atualizarPokemon (request: Request, response: Response)
+    {
+        const { name } = request.params;
+        const pokemon = await PokemonSchema.updateOne({name:name});
+        response.status(200).json(pokemon);
+    }
 }
 
 
