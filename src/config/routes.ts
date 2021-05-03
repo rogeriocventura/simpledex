@@ -58,6 +58,17 @@ router.post("/simpledex/treinadorPokemon/cadastrar", treinadorPokemonController.
 router.get("/simpledex/treinadorPokemon/listar", treinadorPokemonController.listarTreinadorPokemon);
 
 
+//buscar um treinador e apenas pokemon relacionados a ele
+router.get("/simpledex/treinadorPokemon/listarPokemon/:id", treinadorPokemonController.listarPokemonDoTreinador);
+
+//buscar pokemon e todos os treinadores que ja encontraram ele
+router.get("/simpledex/treinadorPokemon/listarTreinadores/:id", treinadorPokemonController.listarTreinadoresPorPokemon);
+
+//busca a quantidade de pokemon de um treinador por tipo de pokemon
+router.get("/simpledex/treinadorPokemon/contarPokemonPorTipo/:id", treinadorPokemonController.quantidadePokemonDoTreinadorPorTipo);
+
+//busca a quantidade de pokemon de um treinador por tipo de pokemon
+router.get("/simpledex/treinadorPokemon/contarPokemon/:id", treinadorPokemonController.quantidadePokemonDoTreinador);
 
 
 export { router };

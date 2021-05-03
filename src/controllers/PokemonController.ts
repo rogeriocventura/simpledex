@@ -40,22 +40,37 @@ class PokemonController{
     }
     async buscarPokemon (request: Request, response: Response)
     {
-        const { name } = request.params;
-        const pokemon = await PokemonSchema.find({name:name});
+        const { nome } = request.params;
+        const pokemon = await PokemonSchema.find({nome:nome});
         response.status(200).json(pokemon);
     }
 
     async removerPokemon (request: Request, response: Response)
     {
-        const { name } = request.params;
-        const pokemon = await PokemonSchema.deleteOne({name:name});
+        const { nome } = request.params;
+        const pokemon = await PokemonSchema.deleteOne({nome:nome});
         response.status(200).json(pokemon);
     }
     async atualizarPokemon (request: Request, response: Response)
     {
-        const { name } = request.params;
-        const pokemon = await PokemonSchema.updateOne({name:name});
-        response.status(200).json(pokemon);
+        try
+        {
+            const alteraPokemon =  await PokemonSchema.updateOne({nome: request.body.nome},request.body);
+            response.status(201).json({
+            objeto: alteraPokemon,
+            msg: "dados do pokemon alterados",
+            erro: false
+            });
+        }
+        catch (error)
+        {
+            response.status(400).json({
+            objeto: error,
+            msg: "Falha na validação",
+            erro: true
+            });
+        }
+        
     }
 }
 
