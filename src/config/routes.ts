@@ -38,6 +38,9 @@ router.post("/simpledex/pokemon/cadastrar", pokemonController.cadastrarPokemon);
 //buscar pokemon por nome
 router.get("/simpledex/pokemon/buscar/:nome", pokemonController.buscarPokemon);
 
+//buscar pokemon por tipo
+router.get("/simpledex/pokemon/buscarPorTipo/:tipo", pokemonController.buscarPokemonPorTipo);
+
 //listar todos pokemon
 router.get("/simpledex/pokemon/listar", pokemonController.listarPokemon);
 

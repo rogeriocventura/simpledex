@@ -44,6 +44,16 @@ POST http://localhost:3000/simpledex/pokemon/cadastrar
 Content-Type: application/json
 
 {
+    "nome"          :   "Muk",
+    "descricao"     :   "Muk, grimer's evolved from. Use extreme caution, as its slimy form contains poison.",
+    "tipo"          :   "poison"
+}
+
+###
+POST http://localhost:3000/simpledex/pokemon/cadastrar
+Content-Type: application/json
+
+{
     "nome"          :   "Venonat",
     "descricao"     :   "Venonat, a bug Pokemon. Its eyes function as radar, allowing it to see in the dark.",
     "tipo"          :   "bug"
@@ -116,11 +126,14 @@ POST http://localhost:3000/simpledex/treinador/alterar/meuTeste
 ####
 GET http://localhost:3000/simpledex/pokemon/buscar/grimer
 
-######
-GET http://localhost:3000/simpledex/pokemon/remover/meuTeste
 
-#####
-POST http://localhost:3000/simpledex/pokemon/alterar/meuTeste
+####
+GET http://localhost:3000/simpledex/pokemon/buscarPorTipo/poison
+
+
+######
+GET http://localhost:3000/simpledex/pokemon/remover/grimer
+
 
 
 

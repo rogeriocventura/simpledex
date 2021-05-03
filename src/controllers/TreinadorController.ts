@@ -54,9 +54,23 @@ class TreinadorController{
     }
     async atualizarTreinador (request: Request, response: Response)
     {
-        const { id } = request.params;
-        const treinador = await TreinadorSchema.updateOne({pokeId:id});
-        response.status(200).json(treinador);
+        try
+        {
+            const alteraTreinador =  await TreinadorSchema.updateOne({nome: request.body.nome},request.body);
+            response.status(201).json({
+            objeto: alteraTreinador,
+            msg: "dados do pokemon alterados",
+            erro: false
+            });
+        }
+        catch (error)
+        {
+            response.status(400).json({
+            objeto: error,
+            msg: "Falha na validação",
+            erro: true
+            });
+        }
     }
 }
 

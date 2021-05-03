@@ -45,6 +45,13 @@ class PokemonController{
         response.status(200).json(pokemon);
     }
 
+    async buscarPokemonPorTipo (request: Request, response: Response)
+    {
+        const { tipo } = request.params;
+        const pokemon = await PokemonSchema.find({tipo:tipo});
+        response.status(200).json(pokemon);
+    }
+
     async removerPokemon (request: Request, response: Response)
     {
         const { nome } = request.params;
