@@ -1,4 +1,6 @@
 import { Router, Request, Response } from "express";
+import cors from "cors";
+
 import { PokemonController } from "../controllers/PokemonController";
 import { TreinadorController } from "../controllers/TreinadorController";
 import { TreinadorPokemonController } from "../controllers/TreinadorPokemonController";
@@ -24,10 +26,10 @@ router.get("/simpledex/treinador/buscar/:id", treinadorController.buscarTreinado
 router.get("/simpledex/treinador/listar", treinadorController.listarTreinador);
 
 //alterar dados do treinador
-router.post("/simpledex/treinador/alterar", treinadorController.atualizarTreinador);
+router.put("/simpledex/treinador/alterar", treinadorController.atualizarTreinador);
 
 //excluir treinador usando pokeid
-router.get("/simpledex/treinador/remover/:id", treinadorController.removerTreinador);  
+router.delete("/simpledex/treinador/remover/:id", treinadorController.removerTreinador);  
 
 
 
@@ -45,10 +47,10 @@ router.get("/simpledex/pokemon/buscarPorTipo/:tipo", pokemonController.buscarPok
 router.get("/simpledex/pokemon/listar", pokemonController.listarPokemon);
 
 //alterar dados do pokemon
-router.post("/simpledex/pokemon/alterar", pokemonController.atualizarPokemon);
+router.put("/simpledex/pokemon/alterar", pokemonController.atualizarPokemon);
 
 //excluir pokemon por nome
-router.get("/simpledex/pokemon/remover/:nome", pokemonController.removerPokemon);  
+router.delete("/simpledex/pokemon/remover/:nome", pokemonController.removerPokemon);  
 
 
 

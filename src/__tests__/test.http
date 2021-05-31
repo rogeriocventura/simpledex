@@ -116,10 +116,10 @@ GET http://localhost:3000/simpledex/treinadorPokemon/listar
 ###
 GET http://localhost:3000/simpledex/treinador/buscar/meuTeste
 ####
-GET http://localhost:3000/simpledex/treinador/remover/meuTeste2
+DELETE http://localhost:3000/simpledex/treinador/remover/meuTeste2
 
 #####
-POST http://localhost:3000/simpledex/treinador/alterar/meuTeste
+PUT http://localhost:3000/simpledex/treinador/alterar/meuTeste
 
 
 
@@ -132,7 +132,7 @@ GET http://localhost:3000/simpledex/pokemon/buscarPorTipo/poison
 
 
 ######
-GET http://localhost:3000/simpledex/pokemon/remover/grimer
+DELETE http://localhost:3000/simpledex/pokemon/remover/grimer
 
 
 
