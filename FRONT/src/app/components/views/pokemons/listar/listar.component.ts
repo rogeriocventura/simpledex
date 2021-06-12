@@ -1,6 +1,7 @@
+import { PokemonsService } from './../../../../services/pokemons.service';
 import { Pokemons } from './../../../../models/Pokemons';
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
+
 
 @Component({
   selector: 'app-listar',
@@ -12,17 +13,12 @@ import { HttpClient } from "@angular/common/http";
 export class ListarComponent implements OnInit {
   pokemons : Pokemons[] = [];
 
-  constructor(private http: HttpClient) { 
-
-    http.get<Pokemons[]>("http://localhost:3000/simpledex/pokemon/listar").subscribe(( lista ) => {
-        this.pokemons = lista;
-        console.log(this.pokemons);        
-    });
-    
-  }
+  constructor(private service: PokemonsService) { }
 
   ngOnInit(): void {
-    const pokemon = new Pokemons();
+    this.service.listar().subscribe(( pokemons ) => {
+      this.pokemons = pokemons; 
+    });
   }
 
 }
