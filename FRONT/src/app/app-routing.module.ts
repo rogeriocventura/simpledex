@@ -12,7 +12,7 @@ const routes: Routes = [
   },
   {
     //rotas para cadastrar os pokemons
-    path : 'pokemons/cadastrar',
+    path : 'simpledex/pokemon/cadastrar',
     component : CadastrarComponent
   }
 ];

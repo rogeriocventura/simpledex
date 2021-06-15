@@ -1,1 +1,9 @@
-<p>cadastrar works!</p>
+<label for="createdAt">Data de captura do pokemon</label>
+<input type="text" name="createdAt" [(ngModel)]="pokemon.createdAt">
+
+<br>
+
+ <button (click)="cadastrar()">Cadastrar</button>
+
+<br>
+<a routerLink="">Listar Pokemons</a>

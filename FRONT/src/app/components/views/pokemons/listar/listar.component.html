@@ -1,3 +1,20 @@
-<ul *ngFor ="let poke of pokemons ">
-    <li> {{poke._id}} </li>
-</ul>
+<a routerLink="simpledex/pokemon/cadastrar">Cadastrar Pokemons</a>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Data de criação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pokemon of pokemons">
+            <td>
+                {{pokemon._id}}
+            </td>
+            <td>
+                {{pokemon.createdAt | date: "dd/MM/yyyy"}}
+            </td>
+        </tr>
+    </tbody>
+</table>

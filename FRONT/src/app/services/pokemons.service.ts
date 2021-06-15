@@ -17,6 +17,6 @@ export class PokemonsService {
   }
 
   cadastrar(pokemon : Pokemons) : Observable<Pokemons>{
-    return this.http.post<Pokemons>(`${this.baseURL}/simpledex/pokemon/cadastrar`, pokemon);
+    return this.http.post<Pokemons>(`${this.baseURL}simpledex/pokemon/cadastrar`, pokemon);
   }
 }

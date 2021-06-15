@@ -13,11 +13,7 @@ class PokemonController{
     {
         try {
             const novoPokemon = await PokemonSchema.create(request.body);
-            response.status(201).json({
-              objeto: novoPokemon,
-              msg: "Novo pokemon cadastrado!",
-              erro: false
-            });
+            response.status(201).json(novoPokemon);
           } catch (error) 
           {
             if (error.name === 'MongoError' && error.code === 11000) 

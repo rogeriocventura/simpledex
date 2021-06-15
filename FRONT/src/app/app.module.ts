@@ -8,6 +8,7 @@ import { ListarComponent } from './components/views/pokemons/listar/listar.compo
 import { CadastrarComponent } from './components/views/pokemons/cadastrar/cadastrar.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { ContentComponent } from './components/template/content/content.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ContentComponent } from './components/template/content/content.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
