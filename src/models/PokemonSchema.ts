@@ -7,7 +7,7 @@ const pokemonSchema = new Schema(
         nome: 
         {
             type: String,
-            required: [true, "O campo NOME do treinador é obrigatório!!"],
+            required: [true, "O campo NOME do Pokemon é obrigatório!!"],
             unique:true
         },
         descricao: 
@@ -18,7 +18,7 @@ const pokemonSchema = new Schema(
         tipo: 
         {
             type: String,
-            required: [true, "É necessário definir a SENHA do treinador!!"]
+            required: [true, "É necessário definir a qual o tipo do Pokemon!!"]
         }
     },
     {
