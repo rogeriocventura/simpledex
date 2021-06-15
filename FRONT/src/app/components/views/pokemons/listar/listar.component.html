@@ -1,14 +1,28 @@
 <a routerLink="simpledex/pokemon/cadastrar">Cadastrar Pokemons</a>
-
+<br>
+<br>
+<br>
 <table>
     <thead>
         <tr>
+            <th>Nome do Pokémon</th>
+            <th>Descrição do Pokémon</th>
+            <th>Tipo do Pokémon</th>
             <th>ID</th>
             <th>Data de criação</th>
         </tr>
     </thead>
     <tbody>
         <tr *ngFor="let pokemon of pokemons">
+            <td>
+                {{pokemon.nome}}
+            </td>
+            <td>
+                {{pokemon.descricao}}
+            </td>
+            <td>
+                {{pokemon.tipo}}
+            </td>
             <td>
                 {{pokemon._id}}
             </td>
