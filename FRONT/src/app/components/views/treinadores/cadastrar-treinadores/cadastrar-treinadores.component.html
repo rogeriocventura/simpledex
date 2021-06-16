@@ -7,11 +7,35 @@
 
 <br>
 
+    <label for="email">Insira seu email!</label>
+    <input type="text" name="email" [(ngModel)]="treinador.email">
+
+<br>
+
+<br>
+
+    <label for="senha">Escolha uma senha!</label>
+    <input type="password" name="senha" [(ngModel)]="treinador.senha">
+
+<br>
+
+<br>
+
+    <label for="pokeId">Insira um ID único para te identificar!</label>
+    <input type="text" name="pokeId" [(ngModel)]="treinador.pokeId">
+
+<br>
+
+<br>
+
  <button (click)="cadastrar()">Cadastrar</button>
 
 <br>
-<a routerLink="">Listar Pokemons</a>
 
 <br>
-<a routerLink="simpledex/treinador/listar">Listar Treinadores</a>
+    <a routerLink="../../pokemons/listar">Listar Pokemons</a>
+<br>
+
+<br>
+    <a routerLink="../listar">Listar Treinadores</a>
 <br>
