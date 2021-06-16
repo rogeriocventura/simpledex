@@ -1,0 +1,33 @@
+<br>
+<br>
+<table>
+    <thead>
+        <tr>
+            <th>Nome do Treinador</th>
+            <th>Email do Treinador</th>
+            <th>Senha do Treinador</th>
+            <th>PokeId</th>
+            <th>Data de criação</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let treinador of treinador">
+            <td>
+                {{treinador.nome}}
+            </td>
+            <td>
+                {{treinador.email}}
+            </td>
+            <td>
+                {{treinador.senha}}
+            </td>
+            <td>
+                {{treinador.pokeId}}
+            </td>
+            <td>
+                {{treinador.createdAt | date: "dd/MM/yyyy"}}
+            </td>
+        </tr>
+    </tbody>
+</table>
+<a routerLink="">Listar Pokemons</a>

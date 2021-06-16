@@ -9,6 +9,8 @@ import { CadastrarComponent } from './components/views/pokemons/cadastrar/cadast
 import { HeaderComponent } from './components/template/header/header.component';
 import { ContentComponent } from './components/template/content/content.component';
 import { FormsModule } from '@angular/forms';
+import { ListarTreinadoresComponent } from './components/views/treinadores/listar-treinadores/listar-treinadores.component';
+import { CadastrarTreinadoresComponent } from './components/views/treinadores/cadastrar-treinadores/cadastrar-treinadores.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FormsModule } from '@angular/forms';
     ListarComponent,
     CadastrarComponent,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    ListarTreinadoresComponent,
+    CadastrarTreinadoresComponent
   ],
   imports: [
     BrowserModule,
