@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Treinadores } from 'src/app/models/Treinadores';
 import { TreinadoresService } from 'src/app/services/treinadores.service';
 
+
 @Component({
   selector: 'app-cadastrar-treinadores',
   templateUrl: './cadastrar-treinadores.component.html',

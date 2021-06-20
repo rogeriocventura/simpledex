@@ -10,7 +10,7 @@ import { Pokemons } from 'src/app/models/Pokemons';
 export class CadastrarComponent implements OnInit {
 
   pokemon : Pokemons = new Pokemons();
-  campo : string = "";
+  creatAt!: string;
   constructor(private service : PokemonsService) { 
 
   }
@@ -19,10 +19,11 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar(): void{
-    console.log(this.pokemon.createdAt);
-    // this.pokemon = new Pokemons();
-    // this.pokemon.createdAt = new Date("2021/06/14");
-    this.service.cadastrar(this.pokemon).subscribe((pokemon) => {
+    let pokemon = new Pokemons();
+    pokemon.createdAt = new Date(this.creatAt);
+    console.log(pokemon.createdAt);
+
+    this.service.cadastrar(pokemon).subscribe((pokemon) => {
       console.log(pokemon);
     })
   }
