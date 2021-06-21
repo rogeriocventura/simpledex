@@ -11,6 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ListarComponent } from './components/views/pokemons/listar/listar.component';
 import { CadastrarComponent } from './components/views/pokemons/cadastrar/cadastrar.component';
@@ -20,6 +21,7 @@ import { FormsModule } from '@angular/forms';
 import { ListarTreinadoresComponent } from './components/views/treinadores/listar-treinadores/listar-treinadores.component';
 import { CadastrarTreinadoresComponent } from './components/views/treinadores/cadastrar-treinadores/cadastrar-treinadores.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokemon/buscar-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ContentComponent,
     ListarTreinadoresComponent,
     CadastrarTreinadoresComponent,
+    BuscarPokemonComponent,
     
   ],
   imports: [
@@ -45,7 +48,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatIconModule,
     MatInputModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
     
   ],
   providers: [],

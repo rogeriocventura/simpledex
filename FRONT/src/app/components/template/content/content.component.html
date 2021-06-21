@@ -1,20 +1,28 @@
-<mat-sidenav-container>
-    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64">
-        <mat-nav-list>
-            <mat-list-item>
-                <a routerLink="">Home</a>
+<mat-sidenav-container >
+    <mat-sidenav mode="side" opened fixedInViewport="true" fixedTopGap="64" >
+        <mat-nav-list >
+            <mat-list-item routerLink="/">
+                <a >Home</a>
             </mat-list-item>
-            <mat-list-item>
+            <mat-list-item routerLink="simpledex/pokemon/listar">
                 <mat-icon aria-hidden="false">catching_pokemon</mat-icon>
-                <a routerLink="simpledex/pokemon/cadastrar">Cadastrar Pokémons</a>
+                <a  >Listar todos os Pokémons</a>
             </mat-list-item> 
-            <mat-list-item>
+            <mat-list-item routerLink="simpledex/pokemon/buscar">
+                <mat-icon aria-hidden="false">catching_pokemon</mat-icon>
+                <a  >Buscar por um Pokémon</a>
+            </mat-list-item> 
+            <mat-list-item routerLink="simpledex/pokemon/cadastrar">
+                <mat-icon aria-hidden="false">catching_pokemon</mat-icon>
+                <a  >Cadastrar Pokémons</a>
+            </mat-list-item> 
+            <mat-list-item routerLink="simpledex/treinador/cadastrar">
                 <mat-icon aria-hidden="false">catching_pokemon</mat-icon> 
-                <a routerLink="simpledex/treinador/cadastrar">Cadastrar Treinadores</a>
+                <a >Cadastrar Treinadores</a>
             </mat-list-item>
-            <mat-list-item>
+            <mat-list-item routerLink="simpledex/treinador/listar">
                 <mat-icon aria-hidden="false">catching_pokemon</mat-icon> 
-                <a routerLink="simpledex/treinador/listar">Listar Treinadores</a>
+                <a >Listar todos os Treinadores</a>
             </mat-list-item>
          </mat-nav-list>
     </mat-sidenav>

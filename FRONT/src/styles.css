@@ -2,3 +2,11 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+@font-face {
+    font-family: pokemonSolid;
+    src: url(assets/fonts/PokemonSolid.ttf) format("opentype");
+  }
+@font-face {
+    font-family: pokemonHollow;
+    src: url(assets/fonts/PokemonHollow.ttf) format("opentype");
+  }

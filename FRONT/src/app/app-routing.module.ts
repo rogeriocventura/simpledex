@@ -6,12 +6,18 @@ import { ListarTreinadoresComponent } from './components/views/treinadores/lista
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CadastrarTreinadoresComponent } from './components/views/treinadores/cadastrar-treinadores/cadastrar-treinadores.component';
+import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokemon/buscar-pokemon.component';
 
 const routes: Routes = [
   {
     //rota para listar os pokemons
-    path : '',
+    path : 'simpledex/pokemon/listar',
     component : ListarComponent
+  },
+  {
+    //rota para buscar os pokemons
+    path : 'simpledex/pokemon/buscar',
+    component : BuscarPokemonComponent
   },
   {
     //rotas para cadastrar os pokemons

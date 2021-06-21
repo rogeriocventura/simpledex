@@ -16,6 +16,10 @@ export class PokemonsService {
     return this.http.get<Pokemons[]>(`${this.baseURL}simpledex/pokemon/listar`);
   }
 
+  buscar(nomePokemon : string) : Observable<Pokemons[]>{
+    return this.http.get<Pokemons[]>(`${this.baseURL}simpledex/pokemon/buscar/`+nomePokemon);
+  }
+
   cadastrar(pokemon : Pokemons) : Observable<Pokemons>{
     return this.http.post<Pokemons>(`${this.baseURL}simpledex/pokemon/cadastrar`, pokemon);
   }

@@ -1,0 +1,22 @@
+
+<div style="margin-left: 1%;">
+    <br>
+        <label for="nome">Procurar por Pokemon </label>
+    <br>
+    
+    <br>
+        <input #nomePokemon type="text" name="nomePokemon" >
+    <br>
+    <br>
+        <button class="button" mat-raised-button (click)="buscar(nomePokemon.value)">Buscar!</button>
+    <br>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <a [(ngModel)]="pokemon">{{pokemon}}</a>
+</div>
+
+
+
