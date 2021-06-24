@@ -20,7 +20,7 @@ export class BuscarPokemonComponent implements OnInit {
   }
   buscar(nomePokemon : string): void{
     this.service.buscar(nomePokemon).subscribe((pokemon) => {
-      console.log(pokemon);
+      this.pokemons = pokemon; 
     })
   }
 }
