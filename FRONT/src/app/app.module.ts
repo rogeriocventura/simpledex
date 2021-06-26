@@ -10,6 +10,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table' 
 
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
@@ -49,6 +50,7 @@ import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokem
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatTableModule,
     ReactiveFormsModule
     
   ],
