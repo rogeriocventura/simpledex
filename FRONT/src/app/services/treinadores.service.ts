@@ -19,4 +19,8 @@ export class TreinadoresService {
   cadastrar(treinador : Treinadores) : Observable<Treinadores>{
     return this.http.post<Treinadores>(`${this.baseURL}simpledex/treinador/cadastrar`, treinador);
   }
+
+  buscar(pokeId : string) : Observable<Treinadores[]>{
+    return this.http.get<Treinadores[]>(`${this.baseURL}simpledex/treinador/buscar/`+ pokeId);
+  }
 }
