@@ -1,7 +1,7 @@
 import { PokemonsService } from './../../../../services/pokemons.service';
 import { Pokemons } from './../../../../models/Pokemons';
 import { Component, OnInit } from '@angular/core';
-
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-listar',
@@ -11,13 +11,17 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class ListarComponent implements OnInit {
-  pokemons : Pokemons[] = [];
+  //pokemons : Pokemons[] = [];
+
+  Pokemons!: MatTableDataSource<Pokemons>;
+  displayedColumns: string[] = ['pokemon.nome','pokemon.descricao','pokemon.tipo','pokemon.createdAt'];
+  pokemons : Pokemons = new Pokemons();
 
   constructor(private service: PokemonsService) { }
 
   ngOnInit(): void {
     this.service.listar().subscribe(( pokemons ) => {
-      this.pokemons = pokemons; 
+      this.Pokemons = new MatTableDataSource<Pokemons>(pokemons);
     });
   }
 

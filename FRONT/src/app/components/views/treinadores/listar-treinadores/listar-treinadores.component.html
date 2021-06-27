@@ -1,31 +1,31 @@
-<br>
-<br>
-<table style="margin-left: auto;margin-right: auto;">
-    <thead>
-        <tr>
-            <th>Nome do Treinador</th>
-            <th>Email do Treinador</th>
-            
-            <th>PokeId</th>
-            <th>Data de criação</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let treinador of treinador">
-            <td>
-                {{treinador.nome}}
-            </td>
-            <td>
-                {{treinador.email}}
-            </td>
-            
-            <td>
-                {{treinador.pokeId}}
-            </td>
-            <td>
-                {{treinador.createdAt | date: "dd/MM/yyyy"}}
-            </td>
-        </tr>
-    </tbody>
-</table>
 
+<table mat-table [dataSource]="Treinadores" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="treinador.nome">
+      <th mat-header-cell *matHeaderCellDef> Nome do Treinador </th>
+      <td mat-cell *matCellDef="let treinador"> {{treinador.nome}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="treinador.email">
+      <th mat-header-cell *matHeaderCellDef> Email do Treinador </th>
+      <td mat-cell *matCellDef="let treinador">  {{treinador.email}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="treinador.senha">
+      <th mat-header-cell *matHeaderCellDef> Senha </th>
+      <td mat-cell *matCellDef="let treinador"> {{treinador.senha}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="treinador.pokeId">
+        <th mat-header-cell *matHeaderCellDef> PokeId </th>
+        <td mat-cell *matCellDef="let treinador"> {{treinador.pokeId}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="treinador.createdAt">
+    <th mat-header-cell *matHeaderCellDef> Data de criação </th>
+    <td mat-cell *matCellDef="let treinador"> {{treinador.createdAt}} </td>
+    </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
