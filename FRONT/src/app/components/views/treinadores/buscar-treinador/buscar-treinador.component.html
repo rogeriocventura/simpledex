@@ -13,8 +13,6 @@
     <br>
    
     <br>
-    
-    <br>
 
     <table mat-table [dataSource]="treinadores" class="mat-elevation-z8">
         <ng-container matColumnDef="pokeId">
@@ -35,4 +33,18 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
+    
+    <br>
+   
+    <br>
 
+    <ng-container>
+        <p>
+            <label id="quantidadePokemonDoTreinador">
+                Quantidade de Pokémon do Treinador: {{quantidadePokemonDoTreinador}}
+            </label>
+        </p>
+    </ng-container>
+
+
+</div>

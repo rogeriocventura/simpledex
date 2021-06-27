@@ -11,7 +11,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table' 
-
+import {MatSelectModule} from '@angular/material/select';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { ListarComponent } from './components/views/pokemons/listar/listar.component';
@@ -25,6 +25,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokemon/buscar-pokemon.component';
 import { BuscarTreinadorComponent } from './components/views/treinadores/buscar-treinador/buscar-treinador.component';
 import { ListarTreinadorPokemonComponent } from './components/views/treinadorPokemon/listar-treinador-pokemon/listar-treinador-pokemon.component';
+import { CadastrarTreinadorPokemonComponent } from './components/views/treinadorPokemon/cadastrar-treinador-pokemon/cadastrar-treinador-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ListarTreinadorPokemonComponent } from './components/views/treinadorPok
     BuscarPokemonComponent,
     BuscarTreinadorComponent,
     ListarTreinadorPokemonComponent,
+    CadastrarTreinadorPokemonComponent,
     
   ],
   imports: [
@@ -55,6 +57,7 @@ import { ListarTreinadorPokemonComponent } from './components/views/treinadorPok
     MatFormFieldModule,
     MatButtonModule,
     MatTableModule,
+    MatSelectModule,
     ReactiveFormsModule
     
   ],

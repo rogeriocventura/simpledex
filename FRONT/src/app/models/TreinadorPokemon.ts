@@ -3,8 +3,8 @@ import { Treinadores } from "./Treinadores";
 
 export class TreinadorPokemon{
     _id ?: String;
-    treinador ?: Treinadores;
-    pokemon ?: Pokemons;
+    treinador ?: String;
+    pokemon ?: String;
     createdAt ?: Date;
     updatedAt ?: Date;
 }

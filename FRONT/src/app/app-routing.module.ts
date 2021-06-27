@@ -9,6 +9,7 @@ import { CadastrarTreinadoresComponent } from './components/views/treinadores/ca
 import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokemon/buscar-pokemon.component';
 import { BuscarTreinadorComponent } from './components/views/treinadores/buscar-treinador/buscar-treinador.component';
 import { ListarTreinadorPokemonComponent } from './components/views/treinadorPokemon/listar-treinador-pokemon/listar-treinador-pokemon.component';
+import { CadastrarTreinadorPokemonComponent } from './components/views/treinadorPokemon/cadastrar-treinador-pokemon/cadastrar-treinador-pokemon.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,11 @@ const routes: Routes = [
     //rota para listar todos os relacionamentos de treinadores e pokemons
     path : 'simpledex/treinadorPokemon/listar',
     component : ListarTreinadorPokemonComponent
+  },
+  {
+    //rota para listar todos os relacionamentos de treinadores e pokemons
+    path : 'simpledex/treinadorPokemon/cadastrar',
+    component : CadastrarTreinadorPokemonComponent
   },
   {
     //rota para buscar os pokemons

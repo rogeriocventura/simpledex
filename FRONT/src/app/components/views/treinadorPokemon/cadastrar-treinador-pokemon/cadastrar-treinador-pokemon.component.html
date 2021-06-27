@@ -1,0 +1,21 @@
+<h4>Selecionar Treinador</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Nome do Treinador</mat-label>
+  <mat-select #treinadorId>
+    <mat-option *ngFor="let treinador of treinadores" [value]="treinador._id">
+      {{treinador.pokeId}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<h4>Selecionar Pokémon a Cadastrar</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Nome do Pokémon</mat-label>
+  <mat-select #pokemonId>
+    <mat-option *ngFor="let pokemon of pokemons" [value]="pokemon._id">
+      {{pokemon.nome}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+<button class="button" mat-raised-button (click)="cadastrar(treinadorId.value, pokemonId.value)">Cadastrar</button>
