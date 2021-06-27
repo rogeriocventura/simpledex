@@ -24,6 +24,7 @@ import { CadastrarTreinadoresComponent } from './components/views/treinadores/ca
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokemon/buscar-pokemon.component';
 import { BuscarTreinadorComponent } from './components/views/treinadores/buscar-treinador/buscar-treinador.component';
+import { ListarTreinadorPokemonComponent } from './components/views/treinadorPokemon/listar-treinador-pokemon/listar-treinador-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { BuscarTreinadorComponent } from './components/views/treinadores/buscar-
     CadastrarTreinadoresComponent,
     BuscarPokemonComponent,
     BuscarTreinadorComponent,
+    ListarTreinadorPokemonComponent,
     
   ],
   imports: [

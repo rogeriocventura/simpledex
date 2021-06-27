@@ -8,12 +8,18 @@ import { RouterModule, Routes } from '@angular/router';
 import { CadastrarTreinadoresComponent } from './components/views/treinadores/cadastrar-treinadores/cadastrar-treinadores.component';
 import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokemon/buscar-pokemon.component';
 import { BuscarTreinadorComponent } from './components/views/treinadores/buscar-treinador/buscar-treinador.component';
+import { ListarTreinadorPokemonComponent } from './components/views/treinadorPokemon/listar-treinador-pokemon/listar-treinador-pokemon.component';
 
 const routes: Routes = [
   {
     //rota para listar os pokemons
     path : 'simpledex/pokemon/listar',
     component : ListarComponent
+  },
+  {
+    //rota para listar todos os relacionamentos de treinadores e pokemons
+    path : 'simpledex/treinadorPokemon/listar',
+    component : ListarTreinadorPokemonComponent
   },
   {
     //rota para buscar os pokemons
