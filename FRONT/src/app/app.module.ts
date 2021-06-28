@@ -28,6 +28,8 @@ import { ListarTreinadorPokemonComponent } from './components/views/treinadorPok
 import { CadastrarTreinadorPokemonComponent } from './components/views/treinadorPokemon/cadastrar-treinador-pokemon/cadastrar-treinador-pokemon.component';
 import { UpdatePokemonComponent } from './components/views/pokemons/update-pokemon/update-pokemon.component';
 import { UpdateTreinadorComponent } from './components/views/treinadores/update-treinador/update-treinador.component';
+import { RemoverTreinadorComponent } from './components/views/treinadores/remover-treinador/remover-treinador.component';
+import { RemoverPokemonComponent } from './components/views/pokemons/remover-pokemon/remover-pokemon.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { UpdateTreinadorComponent } from './components/views/treinadores/update-
     CadastrarTreinadorPokemonComponent,
     UpdatePokemonComponent,
     UpdateTreinadorComponent,
+    RemoverTreinadorComponent,
+    RemoverPokemonComponent,
     
   ],
   imports: [

@@ -13,6 +13,7 @@ import { TreinadorPokemonService } from 'src/app/services/treinadorPokemon.servi
 export class BuscarTreinadorComponent implements OnInit {
   treinadores!: MatTableDataSource<Treinadores>;
   displayedColumns: string[] = ['pokeId','nome','email'];
+  displayedColumns2: string[] = ['tipo', 'quantidade'];
   treinador : Treinadores = new Treinadores();
   pokeId : string = "";
   quantidadePokemonDoTreinador : string = "";
@@ -37,7 +38,7 @@ export class BuscarTreinadorComponent implements OnInit {
 
     this.service2.quantidadePokemonDoTreinadorPorTipo(pokeId).subscribe((retorno) => {
       console.log(retorno);
-      this.quantidadePokemonDoTreinador = retorno.toString();
+      this.quantidadePokemonDoTreinadorPorTipo = retorno.toString();
       
     })
   }

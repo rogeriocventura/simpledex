@@ -27,4 +27,8 @@ export class PokemonsService {
   atualizar(pokemon : Pokemons) : Observable<Pokemons>{
     return this.http.put<Pokemons>(`${this.baseURL}simpledex/pokemon/alterar`, pokemon);
   }
+
+  remover(nomePokemon : string) : Observable<Pokemons[]>{
+    return this.http.delete<Pokemons[]>(`${this.baseURL}simpledex/pokemon/remover/`+ nomePokemon);
+  }
 }

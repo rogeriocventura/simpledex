@@ -1,0 +1,12 @@
+<h4>Selecionar Pokémon a Remover</h4>
+<mat-form-field appearance="fill">
+  <mat-label>Nome do Pokémon</mat-label>
+  <mat-select #pokemonId>
+    <mat-option *ngFor="let pokemon of pokemons" [value]="pokemon.nome">
+      {{pokemon.nome}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+<br>
+<button class="button" mat-raised-button (click)="remover(pokemonId.value)">Remover</button>

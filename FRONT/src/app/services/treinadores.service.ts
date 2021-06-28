@@ -27,4 +27,8 @@ export class TreinadoresService {
   atualizar(treinador : Treinadores) : Observable<Treinadores>{
     return this.http.put<Treinadores>(`${this.baseURL}simpledex/treinador/alterar`, treinador);
   }
+
+  remover(pokeId : string) : Observable<Treinadores[]>{
+    return this.http.delete<Treinadores[]>(`${this.baseURL}simpledex/treinador/remover/`+ pokeId);
+  }
 }

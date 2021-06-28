@@ -1,0 +1,12 @@
+<h4>Selecionar Treinador a Remover</h4>
+<mat-form-field appearance="fill">
+  <mat-label>pokeId do Treinador</mat-label>
+  <mat-select #treinadorId>
+    <mat-option *ngFor="let treinador of treinadores" [value]="treinador.pokeId">
+      {{treinador.pokeId}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<br>
+<br>
+<button class="button" mat-raised-button (click)="remover(treinadorId.value)">Remover</button>

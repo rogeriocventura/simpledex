@@ -33,7 +33,7 @@
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
-    
+
     <br>
    
     <br>
@@ -42,6 +42,11 @@
         <p>
             <label id="quantidadePokemonDoTreinador">
                 Quantidade de Pokémon do Treinador: {{quantidadePokemonDoTreinador}}
+            </label>
+        </p>
+        <p>
+            <label id="quantidadePokemonDoTreinadorPorTipo">
+                Quantidade de Pokémon do Treinador por Tipo: {{quantidadePokemonDoTreinadorPorTipo}}
             </label>
         </p>
     </ng-container>

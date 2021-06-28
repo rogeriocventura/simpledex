@@ -1,6 +1,6 @@
 <h4>Selecionar Treinador</h4>
 <mat-form-field appearance="fill">
-  <mat-label>Nome do Treinador</mat-label>
+  <mat-label>pokeId do Treinador</mat-label>
   <mat-select #treinadorId>
     <mat-option *ngFor="let treinador of treinadores" [value]="treinador._id">
       {{treinador.pokeId}}

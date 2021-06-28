@@ -11,6 +11,8 @@ import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokem
 import { BuscarTreinadorComponent } from './components/views/treinadores/buscar-treinador/buscar-treinador.component';
 import { ListarTreinadorPokemonComponent } from './components/views/treinadorPokemon/listar-treinador-pokemon/listar-treinador-pokemon.component';
 import { CadastrarTreinadorPokemonComponent } from './components/views/treinadorPokemon/cadastrar-treinador-pokemon/cadastrar-treinador-pokemon.component';
+import { RemoverTreinadorComponent } from './components/views/treinadores/remover-treinador/remover-treinador.component';
+import { RemoverPokemonComponent } from './components/views/pokemons/remover-pokemon/remover-pokemon.component';
 
 const routes: Routes = [
   {
@@ -44,6 +46,11 @@ const routes: Routes = [
     component : CadastrarComponent
   },
   {
+    //rotas para cadastrar os pokemons
+    path : 'simpledex/pokemon/remover',
+    component : RemoverPokemonComponent
+  },
+  {
     //rota para listar os treinadores
     path : 'simpledex/treinador/listar',
     component : ListarTreinadoresComponent
@@ -52,6 +59,11 @@ const routes: Routes = [
     //rota para buscar treinador por pokeId
     path : 'simpledex/treinador/buscar',
     component : BuscarTreinadorComponent
+  },
+  {
+    //rota para buscar treinador por pokeId
+    path : 'simpledex/treinador/remover',
+    component : RemoverTreinadorComponent
   },
   {
     //rotas para cadastrar os treinadores
