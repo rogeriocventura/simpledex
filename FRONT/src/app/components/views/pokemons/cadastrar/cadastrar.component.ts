@@ -19,11 +19,11 @@ export class CadastrarComponent implements OnInit {
   }
 
   cadastrar(): void{
-    let pokemon = new Pokemons();
-    pokemon.createdAt = new Date(this.creatAt);
-    console.log(pokemon.createdAt);
+    //let pokemon = new Pokemons();
+    //pokemon.createdAt = new Date(this.creatAt);
+    //console.log(pokemon.createdAt);
 
-    this.service.cadastrar(pokemon).subscribe((pokemon) => {
+    this.service.cadastrar(this.pokemon).subscribe((pokemon) => {
       console.log(pokemon);
     })
   }

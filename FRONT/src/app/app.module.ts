@@ -26,6 +26,8 @@ import { BuscarPokemonComponent } from './components/views/pokemons/buscar-pokem
 import { BuscarTreinadorComponent } from './components/views/treinadores/buscar-treinador/buscar-treinador.component';
 import { ListarTreinadorPokemonComponent } from './components/views/treinadorPokemon/listar-treinador-pokemon/listar-treinador-pokemon.component';
 import { CadastrarTreinadorPokemonComponent } from './components/views/treinadorPokemon/cadastrar-treinador-pokemon/cadastrar-treinador-pokemon.component';
+import { UpdatePokemonComponent } from './components/views/pokemons/update-pokemon/update-pokemon.component';
+import { UpdateTreinadorComponent } from './components/views/treinadores/update-treinador/update-treinador.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { CadastrarTreinadorPokemonComponent } from './components/views/treinador
     BuscarTreinadorComponent,
     ListarTreinadorPokemonComponent,
     CadastrarTreinadorPokemonComponent,
+    UpdatePokemonComponent,
+    UpdateTreinadorComponent,
     
   ],
   imports: [

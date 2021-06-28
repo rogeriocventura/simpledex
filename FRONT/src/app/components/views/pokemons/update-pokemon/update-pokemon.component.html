@@ -1,0 +1,31 @@
+
+<div class="example-container" style="margin-left: 1%;">
+    <p>
+        <mat-form-field appearance="fill">
+        <mat-label for="nome">Nome do Pokémon</mat-label>
+        <input matInput placeholder="Ex: Pikachu"  type="text" name="nome" [(ngModel)]="pokemon.nome">
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="fill">
+        <mat-label for="descricao">Descricao do pokemon</mat-label>
+        <input matInput placeholder="Ex: powerful electricity" type="text" name="descricao" [(ngModel)]="pokemon.descricao">
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="fill">
+        <mat-label for="tipo">Tipo do pokemon</mat-label>
+        <input matInput placeholder="Ex: bug, dragon, ghost" type="text" name="tipo" [(ngModel)]="pokemon.tipo">
+        </mat-form-field>
+    </p>
+
+    <br>
+
+    <button class="button" mat-raised-button (click)="alterar()">Alterar</button>
+   
+   <br>
+</div>
+
+

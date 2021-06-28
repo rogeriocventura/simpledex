@@ -1,4 +1,4 @@
-import { Pokemons } from './../models/Pokemons';
+import { Pokemons } from 'src/app/models/Pokemons';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
@@ -22,5 +22,9 @@ export class PokemonsService {
 
   cadastrar(pokemon : Pokemons) : Observable<Pokemons>{
     return this.http.post<Pokemons>(`${this.baseURL}simpledex/pokemon/cadastrar`, pokemon);
+  }
+
+  atualizar(pokemon : Pokemons) : Observable<Pokemons>{
+    return this.http.put<Pokemons>(`${this.baseURL}simpledex/pokemon/alterar`, pokemon);
   }
 }

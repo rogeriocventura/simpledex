@@ -23,4 +23,8 @@ export class TreinadoresService {
   buscar(pokeId : string) : Observable<Treinadores[]>{
     return this.http.get<Treinadores[]>(`${this.baseURL}simpledex/treinador/buscar/`+ pokeId);
   }
+  
+  atualizar(treinador : Treinadores) : Observable<Treinadores>{
+    return this.http.put<Treinadores>(`${this.baseURL}simpledex/treinador/alterar`, treinador);
+  }
 }

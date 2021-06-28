@@ -1,0 +1,36 @@
+
+<div class="example-container" style="margin-left: 1%;">
+    <p>
+        <mat-form-field appearance="fill">
+        <mat-label for="nome">Nome do Treinador</mat-label>
+        <input matInput placeholder="Ex: Ash"  type="text" name="nome" [(ngModel)]="treinador.nome">
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="fill">
+        <mat-label for="email">Insira seu email</mat-label>
+        <input matInput placeholder="Ex: ash@mail.com" type="text" name="email" [(ngModel)]="treinador.email">
+        </mat-form-field>
+    </p>
+
+    <p>
+        <mat-form-field appearance="fill">
+        <mat-label for="senha">Escolha uma senha</mat-label>
+        <input matInput placeholder="Ex: *****" type="password" name="senha" [(ngModel)]="treinador.senha">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field appearance="fill">
+        <mat-label for="pokeId">Insira um ID único para identificação</mat-label>
+        <input matInput placeholder="Ex: AshLOVESPikachu" type="text" name="pokeId" [(ngModel)]="treinador.pokeId">
+        </mat-form-field>
+    </p>
+
+    <br>
+
+    <button class="button" mat-raised-button (click)="alterar()">Alterar</button>
+   
+   <br>
+</div>
+

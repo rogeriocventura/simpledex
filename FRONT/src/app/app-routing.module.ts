@@ -1,7 +1,8 @@
 import { CadastrarComponent } from './components/views/pokemons/cadastrar/cadastrar.component';
 import { ListarComponent } from './components/views/pokemons/listar/listar.component';
 import { ListarTreinadoresComponent } from './components/views/treinadores/listar-treinadores/listar-treinadores.component';
-
+import { UpdatePokemonComponent } from './components/views/pokemons/update-pokemon/update-pokemon.component';
+import { UpdateTreinadorComponent } from './components/views/treinadores/update-treinador/update-treinador.component';
 
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -33,6 +34,11 @@ const routes: Routes = [
     component : BuscarPokemonComponent
   },
   {
+    //rotas para atualizar os pokemons
+    path : 'simpledex/pokemon/alterar',
+    component : UpdatePokemonComponent
+  },
+  {
     //rotas para cadastrar os pokemons
     path : 'simpledex/pokemon/cadastrar',
     component : CadastrarComponent
@@ -51,6 +57,11 @@ const routes: Routes = [
     //rotas para cadastrar os treinadores
     path : 'simpledex/treinador/cadastrar',
     component :  CadastrarTreinadoresComponent
+  },
+  {
+    //rotas para atualizar os treinadores
+    path : 'simpledex/treinador/alterar',
+    component : UpdateTreinadorComponent
   }
 ];
 
